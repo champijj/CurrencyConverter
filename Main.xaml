@@ -1,0 +1,186 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="819.333333333333,2702" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="562,2637.33333333333" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ueab:ExcelApplicationCard Password="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="520,2547.33333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="Report.xlsx">
+      <ueab:ExcelApplicationCard.Body>
+        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="TemplateReport" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,2311.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[TemplateReport.Sheet(&quot;Report&quot;).DataTableOutValue]" Delimitator="Comma" DisplayName="Read CSV" FilePath="Product Export.csv" sap:VirtualizedContainerService.HintSize="466,156.666666666667" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+            <ueab:WriteCellX Cell="[TemplateReport.Sheet(&quot;Report&quot;).Cell(&quot;F1&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="466,166.666666666667" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[string.Format(&quot;Total Sales US dollars&quot;)]" />
+            <uix:NApplicationCard OpenMode="{x:Null}" CloseMode="Always" DisplayName="Use Browser Chrome: currency to usd - Google Search" sap:VirtualizedContainerService.HintSize="466,1028.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,810.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelForEachRow DisplayName="Excel For Each Row" EmptyRowBehavior="Stop" HasHeaders="False" sap:VirtualizedContainerService.HintSize="412,718" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_1" Range="[TemplateReport.Sheet(&quot;Converter&quot;)]" SaveAfterEachRow="False">
+                      <ueab:ExcelForEachRow.Body>
+                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,530.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NTypeInto DelayBetweenKeys="{x:Null}" ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'currency to USD'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,230" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[string.Format(&quot;{0} to USD{1}&quot;, CurrentRow.ByField(&quot;A&quot;), &quot;[k(enter)]&quot;.ToString)]">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.google.com/search?rlz=1C1GCEV_enUS840US840&amp;ei=qqRGX7DZBJSPtAbr9LOoBQ&amp;q=currency+to+usd&amp;oq=currency+to+USD&amp;gs_lcp=CgZwc3ktYWIQARgAMgkIABBDEEYQggIyAggAMgIIADICCAAyAggAMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjoECAAQRzoECAAQQ1DaqugBWLe46AFggNvoAWgAcAJ4AIAB5wGIAcAIkgEFMC40LjKYAQCgAQGqAQdnd3Mtd2l6wAEB&amp;sclient=psy-ab" DesignTimeRectangle="283, 203, 800, 51" ElementType="InputBox" FriendlyName="'currency to USD'" FullSelectorArgument="&lt;html app='chrome.exe' title='currency to usd - Google Search' /&gt;&lt;webctrl name='q' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='currency to usd - Google Search' /&gt;&lt;webctrl name='q' tag='INPUT' type='text' aaname='Search' /&gt;" ImageBase64="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" InformativeScreenshot="ad8e12aeeb95b139ddb6a1a8adde6b4a.png" SearchSteps="FuzzySelector, Image" Text="currency to USD" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='text' /&gt;">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="253, 197, 969, 66" ElementType="InputBox" FriendlyName="'currency to USD'" FullSelectorArgument="&lt;html app='chrome.exe' title='currency to usd - Google Search' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' parentid='tsf' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='currency to usd - Google Search' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' type='' parentid='tsf' tag='DIV' aaname='' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" Text="currency to USD" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='DIV' /&gt;" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NGetText DisplayName="Get Text '0.0094'" sap:VirtualizedContainerService.HintSize="358,168" sap2010:WorkflowViewState.IdRef="NGetText_1">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.google.com/search?rlz=1C1GCEV_enUS840US840&amp;ei=yrRGX5j5JKWs0PEPmfKdwAs&amp;q=JPY+to+USD&amp;oq=JPY+to+USD&amp;gs_lcp=CgZwc3ktYWIQAzIMCAAQsQMQQxBGEIICMgIIADIECAAQQzICCAAyBAgAEEMyBAgAEEMyAggAMgIIADICCAAyBAgAEEM6BAgAEEc6DggAEOoCELQCEJoBEOUCOggIABCxAxCDAToICC4QxwEQowI6BQguELEDOgIILjoLCC4QsQMQxwEQowJQpwZY3QpglgtoAXABeACAAc8BiAHYBJIBBTAuMi4xmAEAoAEBqgEHZ3dzLXdperABBsABAQ&amp;sclient=psy-ab&amp;ved=0ahUKEwiYhqKhyrnrAhUlFjQIHRl5B7gQ4dUDCA0&amp;uact=5" DesignTimeRectangle="308, 746, 215, 57" ElementType="InputBox" FriendlyName="'0.0094'" FullSelectorArgument="&lt;html app='chrome.exe' title='JPY to USD - Google Search' /&gt;&lt;webctrl tableRow='3' tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='JPY to USD - Google Search' /&gt;&lt;webctrl aaname='' tag='INPUT' type='number' /&gt;" InformativeScreenshot="f7500246ed4f479de64471393e54f2ff.png" SearchSteps="FuzzySelector" Text="0.0094" TextMethod="AttributeText" TextSelector="&lt;webctrl tag='INPUT' type='number' /&gt;">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <uix:Target DesignTimeRectangle="541, 745, 454, 58" ElementType="DropDown" FriendlyName="'United States Dollar'" FullSelectorArgument="&lt;html app='chrome.exe' title='JPY to USD - Google Search' /&gt;&lt;webctrl tableRow='3' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='JPY to USD - Google Search' /&gt;&lt;webctrl type='' tag='SELECT' aaname='' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" Text="United States Dollar" TextMethod="AttributeText" TextSelector="&lt;webctrl type='' tag='SELECT' /&gt;" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                              <uix:NGetText.Text>
+                                <OutArgument x:TypeArguments="ue:ExcelValue">[CurrentRow.ByField("A")]</OutArgument>
+                              </uix:NGetText.Text>
+                            </uix:NGetText>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelForEachRow.Body>
+                    </ueab:ExcelForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAARHSURBVFhHvZddbBRVFMf7YrAq+OSbD6Kgb0qUUh60xq9VtA8k1EJrH1CsGIM+GLUmBA0kFi0WSMCHLcVCTMO2GmjFCiUFpH60sUjMEtIGLaAWama32w92dt2vOf7PndPd3M7sdmobf8k/M/fec8//zJ07s7NFXrEsawlUnclkmqEBaAxKisLS14yYKo6VafMHyR5A4hYoTh5BbAw6iLnLJc3cQZ7bkKQRSttp5w7mpqBdKKRY0noDE+7HxEuSZ94gVxA5l0n6wiDwYUwIyVyN9I0RMls/p4l33qDwi8+R4VtNxjOlFF7no/G3XyfzcBOlR/6UaB3kNHBYITbuyJU7zNOj12ly+/tkPL2KjKdKCgsxkx++p+bMhIvIuxIYuB0BjmWPn+qi0Atl7mYFFCp/nP45e0qy5IAH3w7nnsBAo8RkMY8cck3uVVMN2yWTDrwaxNYGFfGjpu12vnK3pKxIbRVFD+yj+DdHKd51DOf7KfJatRYztbueyLIkmw68UtqtQEeLjCl4s4Wef0xLyBqrWUuJ8/0S5SQx0EfhDeV0c/+n0pMfeDYrc5zfiYb2konufdNhPr7lZbKmpiQiP5YZlbPCwNPEKizm5a+WPoUVG6ZU9yKarLsna86PXGYiIhELB7zX8/I3S1uRuVpPqZ5blMx9d1FozUqKnzwuowsLvP1cwIC0FelffNkCWImjS4lSKRldWODdzwWMSVuR6r1bKyB9sUpG3Hnyo6hnnb2kXwi8DS4gKW1F6vQirYDM79tkxB03o3xq/VGz4gIS/2sBLecSMstmuoCwtBWOWxDcICPuuBnlU3u/YwXULdA34YVntQJGeh+kZGbum/CKkXEUcG7QsQfUJpzxGH6cNT/etZQeDayljuEeGfVOoC/pKGB0Qn81w9vPLyJtm1uxqxTrKab6jkdoZWCdkq/jFQrHxyVidm7GLarYa2rmG/0xGc0B70ouYAkq0Ub39O3Imk+rpvtdmkjM/ipO4iet7khcM2e1Oe+/icMd6vcAjYN2t82NqEFlX73kKKL8683Ue/28RDm5PH6NNnUGYDipmfNqxBKO5W9S5gxWYTk6tB1y4lqvo4BpVXz7FjVeaKH2yyfoy99O0mfBVnq1ZyuVBCrUeOmhOnrik7+yBXw/pH/XwisJz/vE3gadu2Q8yxdDnQ5zrypp3Uhlu392PPsMvHaKbQ7082f4RTskR/cfP+B21LiaFFJpWyUdCHZKlhzw+BWHW8VWB8uyDAH89aoxaoZo6097aFWbvcSzafOZD2gwMiyzcyD33zjcK3buIGCFWxEMb87Dg8doy3c7aE1nLa1ur1RX6uvYRLWnt6m9MBS5ItE6bI4LfEhsCiMrEZS58wa5eNkLX/lMUEQxJjZA//ljAHP5j+tOnLrfcy/IavA/Yn5xeIJjoSbM1R+1+YBki6H1SOyH+iEDSoj4nPv8iKlEDfYbblaKiv4FoeF/NqqvoEMAAAAASUVORK5CYII=" InformativeScreenshot="4316ad421359244aca13ff930299ecf8.png" Selector="&lt;html app='chrome.exe' title='currency to usd - Google Search'/&gt;" Url="https://www.google.com/search?q=currency+to+usd&amp;rlz=1C1GCEV_enUS840US840&amp;oq=currency+to+&amp;aqs=chrome.1.69i57j0l7.7417j0j15&amp;sourceid=chrome&amp;ie=UTF-8" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <ueab:ExcelForEachRow DisplayName="Excel For Each Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="466,749.333333333333" sap2010:WorkflowViewState.IdRef="ExcelForEachRow_2" Range="[TemplateReport.Sheet(&quot;Report&quot;)]" SaveAfterEachRow="False">
+              <ueab:ExcelForEachRow.Body>
+                <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,562" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:VLookupX ColumnIndex="[2]" DisplayName="VLookup" ExactMatch="True" sap:VirtualizedContainerService.HintSize="412,265.333333333333" sap2010:WorkflowViewState.IdRef="VLookupX_1" Label="[CurrentRow.ByField(&quot;Currency&quot;)]" SourceRange="[TemplateReport.Table(&quot;Converter&quot;)]">
+                      <ueab:VLookupX.Value>
+                        <OutArgument x:TypeArguments="ue:ExcelValue">[Saved.Values(Of ExcelValue)("Value from VLookup")]</OutArgument>
+                      </ueab:VLookupX.Value>
+                    </ueab:VLookupX>
+                    <ueab:WriteCellX Cell="{x:Null}" Value="{x:Null}" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="412,166.666666666667" sap2010:WorkflowViewState.IdRef="WriteCellX_2" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelForEachRow.Body>
+            </ueab:ExcelForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelApplicationCard.Body>
+    </ueab:ExcelApplicationCard>
+  </ueab:SequenceX>
+</Activity>
